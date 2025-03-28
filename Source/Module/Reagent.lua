@@ -1,0 +1,320 @@
+local SearchAddOn = {}
+SearchAddOn.Module = select(2, ...)
+
+local Private = {}
+
+local Reagent = {}
+
+function Reagent:GetItemID(itemName, itemTier)
+    return Private:GetItemID(itemName, itemTier)
+end
+
+function Private:GetItemID(itemName, itemTier)
+    if self.ReagentData[itemName] then
+        if not itemTier then
+            return self.ReagentData[itemName]
+        else
+            return self.ReagentData[itemName][itemTier]
+        end
+    else
+        return nil
+    end
+end
+
+function Private:Initialise()
+    self.ReagentData = {
+        ["Adorning Ribbon"] = "228930",
+        ["Ambivalent Amber"] = "212498",
+        ["Apricate Ink"] = {
+            [1] = "222615",
+            [2] = "222616",
+            [3] = "222617"
+        },
+        ["Arathor's Spear"] = {
+            [1] = "210808",
+            [2] = "210809",
+            [3] = "210810"
+        },
+        ["Assorted Whirligigs"] = "227770",
+        ["Basically Beef"] = "223512",
+        ["Bismuth Bitterling"] = "220137",
+        ["Blessing Blossom"] = {
+            [1] = "210805",
+            [2] = "210806",
+            [3] = "210807"
+        },
+        ["Blinker Fluid"] = "227771",
+        ["Bloody Perch"] = "220135",
+        ["Blossom Pigment"] = {
+            [1] = "224805",
+            [2] = "224804",
+            [3] = "224803"
+        },
+        ["Bottled Storm"] = "218338",
+        ["Boundless Cipher"] = {
+            [1] = "222558",
+            [2] = "222559",
+            [3] = "222560"
+        },
+        ["Bountiful Bolts"] = "227769",
+        ["Bug Brisket"] = "225567",
+        ["Burning Cinderbee Setae"] = "218339",
+        ["Cataclysmic Converter"] = "227772",
+        ["Carapace-Backed Hide"] = {
+            [1] = "219880",
+            [2] = "219881",
+            [3] = "219882"
+        },
+        ["Chaos Circuit"] = {
+            [1] = "221865",
+            [2] = "221866",
+            [3] = "221867"
+        },
+        ["Chitin Armor Banding"] = {
+            [1] = "219898",
+            [2] = "219899",
+            [3] = "212900"
+        },
+        ["Clipped Bird Wing"] = "225569",
+        ["Codified Greenwood"] = {
+            [1] = "222555",
+            [2] = "222556",
+            [3] = "222557"
+        },
+        ["Concentration Concentrate"] = {
+            [1] = "224173",
+            [2] = "224174",
+            [3] = "214175"
+        },
+        ["Core Alloy"] = {
+            [1] = "222417",
+            [2] = "222418",
+            [3] = "222419"
+        },
+        ["Crushed Gemstones"] = {
+            [1] = "213219",
+            [2] = "213220",
+            [3] = "213221"
+        },
+        ["Crystalfused Hide"] = {
+            [1] = "219883",
+            [2] = "219884",
+            [3] = "219885"
+        },
+        ["Crystalline Sturgeon"] = "220136",
+        ["Dawnweave Bolt"] = {
+            [1] = "222801",
+            [2] = "222802",
+            [3] = "222803"
+        },
+        ["Decorative Lens"] = {
+            [1] = "213753",
+            [2] = "213754",
+            [3] = "213755"
+        },
+        ["Dilly-Dally Dace"] = "220134",
+        ["Distilled Algari Freshwater"] = "226205",
+        ["Dornish Pike"] = "220143",
+        ["Duskweave Bolt"] = {
+            [1] = "222798",
+            [2] = "222799",
+            [3] = "222800"
+        },
+        ["Engraved Gemcutter"] = {
+            [1] = "213750",
+            [2] = "213751",
+            [3] = "213752"
+        },
+        ["Entropy Enhancer"] = {
+            [1] = "221868",
+            [2] = "221869",
+            [3] = "221870"
+        },
+        ["Eternium Thread"] = "38426",
+        ["Exquisite Weavercloth Bolt"] = {
+            [1] = "224832",
+            [2] = "224833",
+            [3] = "224834"
+        },
+        ["Extravagant Emerald"] = "212505",
+        ["Fine Thread"] = "2321",
+        ["Fresh Parchment"] = "226204",
+        ["Gilded Vial"] = {
+            [1] = "211806",
+            [2] = "211807",
+            [3] = "211808"
+        },
+        ["Gleaming Shard"] = {
+            [1] = "219949",
+            [2] = "219950",
+            [3] = "219951"
+        },
+        ["Glittering Glass"] = "213399",
+        ["Gloom Chitin"] = {
+            [1] = "212667",
+            [2] = "212668",
+            [3] = "212669"
+        },
+        ["Goldengill Troup"] = "225533",
+        ["Gyrating Gear"] = {
+            [1] = "221859",
+            [2] = "221860",
+            [3] = "221861"
+        },
+        ["Handful of Bismuth Bolts"] = {
+            [1] = "221853",
+            [2] = "221854",
+            [3] = "221855"
+        },
+        ["Handful of Pebbles"] = "213398",
+        ["Heavy Silken Thread"] = "8343",
+        ["Honed Bone Shards"] = "218337",
+        ["Inverted Prism"] = {
+            [1] = "213759",
+            [2] = "213760",
+            [3] = "213761"
+        },
+        ["Kaheti Slum Shark"] = "220147",
+        ["Kaheti Swarm Chitin"] = "218336",
+        ["Leyline Residue"] = "213613",
+        ["Luredrop"] = {
+            [1] = "210799",
+            [2] = "210800",
+            [3] = "210801"
+        },
+        ["Luredrop Pigment"] = {
+            [1] = "222612",
+            [2] = "222613",
+            [3] = "222614"
+        },
+        ["Massive Worm Flank"] = "225565",
+        ["Marbled Stone"] = {
+            [1] = "213756",
+            [2] = "213757",
+            [3] = "213758"
+        },
+        ["Mycobloom"] = {
+            [1] = "210796",
+            [2] = "210797",
+            [3] = "210798"
+        },
+        ["Nacreous Pigment"] = {
+            [1] = "222618",
+            [2] = "222619",
+            [3] = "222620"
+        },
+        ["Nibbling Minnow"] = "220138",
+        ["Null Lotus"] = "213197",
+        ["Null Stone"] = "210939",
+        ["Orbinid"] = {
+            [1] = "210802",
+            [2] = "210803",
+            [3] = "210804"
+        },
+        ["Orbinid Pigment"] = {
+            [1] = "224802",
+            [2] = "224801",
+            [3] = "224800"
+        },
+        ["Ostentatious Onyx"] = "212511",
+        ["Potion of the Reborn Cheetah"] = {
+            [1] = "212266",
+            [2] = "212267",
+            [3] = "212268"
+        },
+        ["Profaned Tinderbox"] = "221758",
+        ["Quiet River Bass"] = "220142",
+        ["Radiant Ruby"] = "212495",
+        ["Refulgent Crystal"] = {
+            [1] = "219952",
+            [2] = "219954",
+            [3] = "219955"
+        },
+        ["Regal Dottyback"] = "220146",
+        ["Ringing Deeps Ingot"] = "221754",
+        ["Roaring Angleseeker"] = "220144",
+        ["Rune Thread"] = "14341",
+        ["Safety Switch"] = {
+            [1] = "221862",
+            [2] = "221863",
+            [3] = "221864"
+        },
+        ["Sanguine Dogfish"] = "220149",
+        ["Shadow Ink"] = {
+            [1] = "222609",
+            [2] = "222610",
+            [3] = "222611"
+        },
+        ["Specular Rainbowfish"] = "220141",
+        ["Spiked Sea Raven"] = "220150",
+        ["Spool of Duskthread"] = {
+            [1] = "222789",
+            [2] = "222790",
+            [3] = "222791"
+        },
+        ["Spool of Weaverthread"] = {
+            [1] = "222795",
+            [2] = "222796",
+            [3] = "222797"
+        },
+        ["Sporecoated Hide"] = {
+            [1] = "219889",
+            [2] = "219890",
+            [3] = "219891"
+        },
+        ["Storm Dust"] = {
+            [1] = "219946",
+            [2] = "219947",
+            [3] = "219948"
+        },
+        ["Stormcharged Leather"] = {
+            [1] = "212664",
+            [2] = "212665",
+            [3] = "212666"
+        },
+        ["Storm-Touched Weapon Wrap"] = {
+            [1] = "219901",
+            [2] = "219902",
+            [3] = "219903"
+        },
+        ["Stunning Sapphire"] = "212508",
+        ["Sunless Carapace"] = {
+            [1] = "212674",
+            [2] = "212675",
+            [3] = "212676"
+        },
+        ["Thunderous Hide"] = {
+            [1] = "212670",
+            [2] = "212672",
+            [3] = "212673"
+        },
+        ["Vicious Flask of Honor"] = "212292",
+        ["Viridescent Spores"] = "213612",
+        ["Warped Wing"] = "225566",
+        ["Weavercloth"] = {
+            [1] = "224828",
+            [2] = "228231",
+            [3] = "228232"
+        },
+        ["Weavercloth Bolt"] = {
+            [1] = "222804",
+            [2] = "222805",
+            [3] = "222806"
+        },
+        ["Whimsical Wiring"] = {
+            [1] = "221856",
+            [2] = "221857",
+            [3] = "221858"
+        },
+        ["Whispering Stargazer"] = "220139",
+        ["Writhing Hide"] = {
+            [1] = "219886",
+            [2] = "219887",
+            [3] = "219888"
+        },
+        ["Writhing Sample"] = "213611",
+    }
+    SearchAddOn.Module.Reagent = Reagent
+end
+
+Private:Initialise()

@@ -1,0 +1,7 @@
+package-as: ASLTOTSM
+ignore:
+  - README.md
+plain-copy:
+  - Source
+required-dependencies:
+  - auctionator
