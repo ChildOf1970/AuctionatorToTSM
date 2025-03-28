@@ -14,4 +14,4 @@ To use this Addon follow the steps below:
 4. Open the TSM auction house interface and paste (CTRL+V) the search string into the search field on the browse tab.
 
 # Known Issues:
-The Reagents database used to find the item id from the item name and tier currently only has reagents from TWW, and just the most common ones.  It is not yet complete.
+The Reagents database used to find the item id from the item name and tier currently only has reagents from TWW, and just the most common ones.  It is not yet complete..
