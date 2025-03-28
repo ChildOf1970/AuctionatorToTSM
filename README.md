@@ -1,7 +1,7 @@
 # Auctionator To TSM
 [![On Curseforge](https://img.shields.io/badge/download-Curseforge-orange)](https://www.curseforge.com/wow/addons/asltotsm)
 [![On Wago](https://img.shields.io/badge/download-Wago-3a3a3a)](https://addons.wago.io/addons/asltotsm/)
-[[Addon Build](https://github.com/ChildOf1970/AuctionatorToTSM/actions/workflows/build.yml/badge.svg)
+[![Build](https://github.com/ChildOf1970/AuctionatorToTSM/actions/workflows/build.yaml/badge.svg)](https://github.com/ChildOf1970/AuctionatorToTSM/actions/workflows/build.yaml)
 
 # Description:
 This AddOn is for people who love CraftSim but prefer the TSM Auction House interface to the Auctionator one.  As there is no direct integration between CraftSim and TSM to do searches based on the ingredients needed to fulfill the Craft Queue, this AddOn uses the Auctionator Shopping List that CraftSim can generate to create a TSM shopping scan string.
