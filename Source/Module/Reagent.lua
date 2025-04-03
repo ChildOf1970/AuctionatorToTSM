@@ -24,11 +24,52 @@ end
 function Private:Initialise()
     self.ReagentData = {
         ["Adorning Ribbon"] = "228930",
+        ["Adjustable Framework"] = {
+            [1] = "222511",
+            [2] = "222512",
+            [3] = "222413"
+        },
+        ["Algari Missive of the Aurora"] = {
+            [1] = "222579",
+            [2] = "222580",
+            [3] = "222581"
+        },
+        ["Algari Missive of the Feverflare"] = {
+            [1] = "222582",
+            [2] = "222583",
+            [3] = "222584"
+        },
+        ["Algari Missive of the Fireflash"] = {
+            [1] = "222585",
+            [2] = "222586",
+            [3] = "222587"
+        },
+        ["Algari Missive of the Harmonious"] = {
+            [1] = "222588",
+            [2] = "222589",
+            [3] = "222590"
+        },
+        ["Algari Missive of the Peerless"] = {
+            [1] = "222591",
+            [2] = "222592",
+            [3] = "222593"
+        },
+        ["Algari Missive of the Quickblade"] = {
+            [1] = "222594",
+            [2] = "222595",
+            [3] = "222596"
+        },
         ["Ambivalent Amber"] = "212498",
+        ["Apprentice's Crafting License"] = "225670",
         ["Apricate Ink"] = {
             [1] = "222615",
             [2] = "222616",
             [3] = "222617"
+        },
+        ["Aqirite"] = {
+            [1] = "210933",
+            [2] = "210934",
+            [3] = "210935"
         },
         ["Arathor's Spear"] = {
             [1] = "210808",
@@ -37,7 +78,19 @@ function Private:Initialise()
         },
         ["Assorted Whirligigs"] = "227770",
         ["Basically Beef"] = "223512",
+        ["Bismuth"] = {
+            [1] = "210930",
+            [2] = "210931",
+            [3] = "210932"
+        },
         ["Bismuth Bitterling"] = "220137",
+        ["Black Dye"] = "2325",
+        ["Blue Dye"] = "6260",
+        ["Blame Redirection Device"] = {
+            [1] = "221926",
+            [2] = "221927",
+            [3] = "221928"
+        },
         ["Blessing Blossom"] = {
             [1] = "210805",
             [2] = "210806",
@@ -50,6 +103,11 @@ function Private:Initialise()
             [2] = "224804",
             [3] = "224803"
         },
+        ["Bottled Brilliance"] = {
+            [1] = "225987",
+            [2] = "225988",
+            [3] = "225989"
+        },
         ["Bottled Storm"] = "218338",
         ["Boundless Cipher"] = {
             [1] = "222558",
@@ -57,6 +115,16 @@ function Private:Initialise()
             [3] = "222560"
         },
         ["Bountiful Bolts"] = "227769",
+        ["Bright Polishing Cloth"] = {
+            [1] = "222879",
+            [2] = "222880",
+            [3] = "222881"
+        },
+        ["Bubbling Mycobloom Culture"] = {
+            [1] = "228401",
+            [2] = "228402",
+            [3] = "228403"
+        },
         ["Bug Brisket"] = "225567",
         ["Burning Cinderbee Setae"] = "218339",
         ["Cataclysmic Converter"] = "227772",
@@ -70,6 +138,11 @@ function Private:Initialise()
             [2] = "221866",
             [3] = "221867"
         },
+        ["Charged Alloy"] = {
+            [1] = "222420",
+            [2] = "222421",
+            [3] = "222422"
+        },
         ["Chitin Armor Banding"] = {
             [1] = "219898",
             [2] = "219899",
@@ -81,10 +154,20 @@ function Private:Initialise()
             [2] = "222556",
             [3] = "222557"
         },
+        ["Complicated Fuse Box"] = {
+            [1] = "221932",
+            [2] = "221933",
+            [3] = "221934"
+        },
+        ["Concealed Chaos Module"] = {
+            [1] = "221938",
+            [2] = "221939",
+            [3] = "221940"
+        },
         ["Concentration Concentrate"] = {
             [1] = "224173",
             [2] = "224174",
-            [3] = "214175"
+            [3] = "224175"
         },
         ["Core Alloy"] = {
             [1] = "222417",
@@ -96,12 +179,19 @@ function Private:Initialise()
             [2] = "213220",
             [3] = "213221"
         },
+        ["Crystal Vial"] = "3371",
         ["Crystalfused Hide"] = {
             [1] = "219883",
             [2] = "219884",
             [3] = "219885"
         },
+        ["Crystalline Powder"] = "213610",
         ["Crystalline Sturgeon"] = "220136",
+        ["Dawnthread Lining"] = {
+            [1] = "222868",
+            [2] = "222869",
+            [3] = "222870"
+        },
         ["Dawnweave Bolt"] = {
             [1] = "222801",
             [2] = "222802",
@@ -119,6 +209,13 @@ function Private:Initialise()
             [1] = "222798",
             [2] = "222799",
             [3] = "222800"
+        },
+        ["Echoing Flux"] = "226202",
+        ["Elemental Flux"] = "18567",
+        ["Energy Redistribution Beacon"] = {
+            [1] = "221941",
+            [2] = "221942",
+            [3] = "221943"
         },
         ["Engraved Gemcutter"] = {
             [1] = "213750",
@@ -138,6 +235,12 @@ function Private:Initialise()
         },
         ["Extravagant Emerald"] = "212505",
         ["Fine Thread"] = "2321",
+        ["Forged Framework"] = {
+            [1] = "222499",
+            [2] = "222500",
+            [3] = "222501"
+        },
+        ["Frayed Wiring"] = "228414",
         ["Fresh Parchment"] = "226204",
         ["Gilded Vial"] = {
             [1] = "211806",
@@ -155,6 +258,7 @@ function Private:Initialise()
             [2] = "212668",
             [3] = "212669"
         },
+        ["Gloomfathom Hide"] = "221757",
         ["Goldengill Troup"] = "225533",
         ["Gyrating Gear"] = {
             [1] = "221859",
@@ -167,16 +271,38 @@ function Private:Initialise()
             [3] = "221855"
         },
         ["Handful of Pebbles"] = "213398",
+        ["Harmonious Horticulture"] = {
+            [1] = "212563",
+            [2] = "212564",
+            [3] = "212565"
+        },
         ["Heavy Silken Thread"] = "8343",
         ["Honed Bone Shards"] = "218337",
+        ["Imperfect Null Stone"] = "217707",
+        ["Impeccable Cogwheel"] = {
+            [1] = "221917",
+            [2] = "221918",
+            [3] = "221919"
+        },
         ["Inverted Prism"] = {
             [1] = "213759",
             [2] = "213760",
             [3] = "213761"
         },
+        ["Ironclaw Alloy"] = {
+            [1] = "222426",
+            [2] = "222427",
+            [3] = "222428"
+        },
+        ["Ironclaw Ore"] = {
+            [1] = "210936",
+            [2] = "210937",
+            [3] = "210938"
+        },
         ["Kaheti Slum Shark"] = "220147",
         ["Kaheti Swarm Chitin"] = "218336",
         ["Leyline Residue"] = "213613",
+        ["Light Parchment"] = "39534",
         ["Luredrop"] = {
             [1] = "210799",
             [2] = "210800",
@@ -193,6 +319,7 @@ function Private:Initialise()
             [2] = "213757",
             [3] = "213758"
         },
+        ["Mosswool Thread"] = "224764",
         ["Mycobloom"] = {
             [1] = "210796",
             [2] = "210797",
@@ -217,14 +344,31 @@ function Private:Initialise()
             [3] = "224800"
         },
         ["Ostentatious Onyx"] = "212511",
+        ["Overclocked Cogwheel"] = {
+            [1] = "221914",
+            [2] = "221915",
+            [3] = "221916"
+        },
         ["Potion of the Reborn Cheetah"] = {
             [1] = "212266",
             [2] = "212267",
             [3] = "212268"
         },
+        ["Prismatic Null Stone"] = {
+            [1] = "213771",
+            [2] = "213772",
+            [3] = "213773"
+        },
         ["Profaned Tinderbox"] = "221758",
+        ["Purple Dye"] = "4342",
         ["Quiet River Bass"] = "220142",
         ["Radiant Ruby"] = "212495",
+        ["Recalibrated Safety Switch"] = {
+            [1] = "221923",
+            [2] = "221924",
+            [3] = "221925"
+        },
+        ["Red Dye"] = "2604",
         ["Refulgent Crystal"] = {
             [1] = "219952",
             [2] = "219954",
@@ -240,13 +384,25 @@ function Private:Initialise()
             [3] = "221864"
         },
         ["Sanguine Dogfish"] = "220149",
+        ["Serrated Cogwheel"] = {
+            [1] = "221911",
+            [2] = "221912",
+            [3] = "221913"
+        },
         ["Shadow Ink"] = {
             [1] = "222609",
             [2] = "222610",
             [3] = "222611"
         },
+        ["Simple Flour"] = "30817",
+        ["Simple Wood"] = "4470",
         ["Specular Rainbowfish"] = "220141",
         ["Spiked Sea Raven"] = "220150",
+        ["Spool of Dawnthread"] = {
+            [1] = "222792",
+            [2] = "222793",
+            [3] = "222794"
+        },
         ["Spool of Duskthread"] = {
             [1] = "222789",
             [2] = "222790",
@@ -262,6 +418,7 @@ function Private:Initialise()
             [2] = "219890",
             [3] = "219891"
         },
+        ["Stack of Pentagold Reviews"] = "225671",
         ["Storm Dust"] = {
             [1] = "219946",
             [2] = "219947",
@@ -288,8 +445,11 @@ function Private:Initialise()
             [2] = "212672",
             [3] = "212673"
         },
+        ["Unraveled Instructions"] = "225672",
+        ["Vial of Kaheti Oils"] = "221756",
         ["Vicious Flask of Honor"] = "212292",
         ["Viridescent Spores"] = "213612",
+        ["Viridian Charmcap"] = "221763",
         ["Warped Wing"] = "225566",
         ["Weavercloth"] = {
             [1] = "224828",
@@ -300,6 +460,11 @@ function Private:Initialise()
             [1] = "222804",
             [2] = "222805",
             [3] = "222806"
+        },
+        ["Weavercloth Embroidery Thread"] = {
+            [1] = "222882",
+            [2] = "222883",
+            [3] = "222884"
         },
         ["Whimsical Wiring"] = {
             [1] = "221856",

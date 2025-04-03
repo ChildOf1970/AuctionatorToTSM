@@ -2,6 +2,7 @@ local SearchAddOn = {}
 SearchAddOn.Module = select(2, ...)
 SearchAddOn.Title = select(1, ...)
 
+---@diagnostic disable-next-line: undefined-global
 local Auctionator = Auctionator.API.v1
 
 local Private = {}
