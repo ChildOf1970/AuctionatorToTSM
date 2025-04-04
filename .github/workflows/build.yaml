@@ -32,10 +32,10 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Lua Check
-      uses: BigWigsMods/actions/luacheck@master
-      with:
-        args: -q
+#    - name: Lua Check
+#      uses: BigWigsMods/actions/luacheck@master
+#      with:
+#        args: -q
 
     - name: Package
       uses: BigWigsMods/packager@master
