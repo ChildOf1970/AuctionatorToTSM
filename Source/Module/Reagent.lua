@@ -9,6 +9,10 @@ function Reagent:GetItemID(itemName, itemTier)
     return Private:GetItemID(itemName, itemTier)
 end
 
+function Private:log(message)
+    SearchAddOn.Module.Utility:log(message)
+end
+
 function Private:GetItemID(itemName, itemTier)
     if self.ReagentData[itemName] then
         if not itemTier then
@@ -480,6 +484,8 @@ function Private:Initialise()
         ["Writhing Sample"] = "213611",
     }
     SearchAddOn.Module.Reagent = Reagent
+
+    self:log("Item Database Loaded")
 end
 
 Private:Initialise()
