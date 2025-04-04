@@ -7,6 +7,7 @@
 ## X-Curse-Project-ID: 1229505
 ## X-Website: https://www.curseforge.com/wow/addons/asltotsm
 ## X-Wago-ID: qGYMEvGg
+## X-WoWI-ID: 26919
 ## X-Category: Auction/Economy
 
 Source\Module\Utility.lua
