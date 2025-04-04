@@ -1,0 +1,32 @@
+name: Validate
+
+on:
+  push:
+    branches:
+    - master
+    paths-ignore:
+    - ".vscode/**"
+    - ".github/**"
+    - ".release/**"
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        type: [retail]
+        include:
+          - type: retail
+            pkgmeta: .pkgmeta
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Lua Check
+      uses: BigWigsMods/actions/luacheck@master
+      with:
+        args: -q

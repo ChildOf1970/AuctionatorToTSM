@@ -1,4 +1,4 @@
-name: Build
+name: Release
 
 on:
   push:
@@ -13,16 +13,10 @@ jobs:
   build:
     strategy:
       matrix:
-        type: [retail] #[retail, cata, wrath, classic]
+        type: [retail]
         include:
           - type: retail
             pkgmeta: .pkgmeta
-#          - type: cata
-#            pkgmeta: .pkgmeta_cata
-#          - type: wrath
-#            pkgmeta: .pkgmeta_wrath
-#          - type: classic
-#            pkgmeta: .pkgmeta_vanilla
 
     runs-on: ubuntu-latest
 
