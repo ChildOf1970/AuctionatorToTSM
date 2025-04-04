@@ -2,6 +2,8 @@ name: Build
 
 on:
   push:
+    branches:
+    - master
     tags:
     - '*'
     paths-ignore:
@@ -32,17 +34,17 @@ jobs:
       with:
         fetch-depth: 0
 
-#    - name: Lua Check
-#      uses: BigWigsMods/actions/luacheck@master
-#      with:
-#        args: -q
-
-    - name: Package
-      uses: BigWigsMods/packager@master
+    - name: Lua Check
+      uses: BigWigsMods/actions/luacheck@master
       with:
-        args: -p 1229505 -a qGYMEvGg -w 26919 -g ${{matrix.type}} -m ${{matrix.pkgmeta}}
-      env:
-        CF_API_KEY: ${{ secrets.CF_API_KEY }}
-        WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
-        WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+        args: -q
+
+#    - name: Package
+#      uses: BigWigsMods/packager@master
+#      with:
+#        args: -p 1229505 -a qGYMEvGg -w 26919 -g ${{matrix.type}} -m ${{matrix.pkgmeta}}
+#      env:
+#        CF_API_KEY: ${{ secrets.CF_API_KEY }}
+#        WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+#        WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+#        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
