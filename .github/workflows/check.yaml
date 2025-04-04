@@ -1,4 +1,4 @@
-name: Validate
+name: Check
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
     - ".release/**"
 
 jobs:
-  validate:
+  check:
     runs-on: ubuntu-latest
 
     steps:
