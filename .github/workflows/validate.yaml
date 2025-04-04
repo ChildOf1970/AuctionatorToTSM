@@ -11,13 +11,6 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        type: [retail]
-        include:
-          - type: retail
-            pkgmeta: .pkgmeta
-
     runs-on: ubuntu-latest
 
     steps:
