@@ -1,6 +1,7 @@
 # Auctionator To TSM
 [![On Curseforge](https://img.shields.io/badge/download-Curseforge-orange)](https://www.curseforge.com/wow/addons/asltotsm)
 [![On Wago](https://img.shields.io/badge/download-Wago-3a3a3a)](https://addons.wago.io/addons/asltotsm/)
+[![On WoWInterface](https://img.shields.io/badge/download-wowui)](https://www.wowinterface.com/downloads/info26919-AuctionatortoTSM.html)
 [![Build](https://github.com/ChildOf1970/AuctionatorToTSM/actions/workflows/build.yaml/badge.svg)](https://github.com/ChildOf1970/AuctionatorToTSM/actions/workflows/build.yaml)
 
 # Description:
