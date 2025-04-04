@@ -19,7 +19,7 @@ end
 function Private:SetLoadedMessage()
     local frame = CreateFrame(self.FRAME)
     frame:RegisterEvent(self.PLAYER_LOGIN)
-    frame:SetScript(self.ON_EVENT, function(uiSelf, event, addon)
+    frame:SetScript(self.ON_EVENT, function(uiSelf, event, _)
         if event == self.PLAYER_LOGIN then
             uiSelf:UnregisterEvent(self.PLAYER_LOGIN)
             uiSelf:Hide()
@@ -33,7 +33,7 @@ end
 
 function Private:SetSlashCommand()
     _G[self.SLASH_PREFIX .. SearchAddOn.Title .. self.SLASH_SUFFIX] = self.SLASH .. SearchAddOn.Title
-    SlashCmdList[SearchAddOn.Title] = function(msg)
+    SlashCmdList[SearchAddOn.Title] = function(_)
         local searchString = self:GetSearchFromShoppingList()
         if not searchString or searchString == self.EMPTY_STRING then
             self:log(self.SHOPPING_LIST_EMPTY_OR_NOT_FOUND)
