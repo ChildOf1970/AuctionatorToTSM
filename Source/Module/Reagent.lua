@@ -89,6 +89,7 @@ function Private:Initialise()
         },
         ["Bismuth Bitterling"] = "220137",
         ["Black Dye"] = "2325",
+        ["Blasphemite"] = "212514",
         ["Blue Dye"] = "6260",
         ["Blame Redirection Device"] = {
             [1] = "221926",
