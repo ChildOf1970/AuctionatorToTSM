@@ -388,6 +388,11 @@ function Private:Initialise()
             [2] = "221863",
             [3] = "221864"
         },
+        ["Sanctified Alloy"] = {
+            [1] = "222423",
+            [2] = "222424",
+            [3] = "222425"
+        },
         ["Sanguine Dogfish"] = "220149",
         ["Serrated Cogwheel"] = {
             [1] = "221911",
