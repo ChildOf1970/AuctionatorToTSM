@@ -53,7 +53,7 @@ function EventHandler:log(message)
     self.Module.Utility:log(message)
 end
 
-function EventHandler:OnEvent(event, _) 
+function EventHandler:OnEvent(event, _)
     if event == EventHandler.PLAYER_LOGIN then
         self:UnregisterEvent(EventHandler.PLAYER_LOGIN)
         self:Hide()
