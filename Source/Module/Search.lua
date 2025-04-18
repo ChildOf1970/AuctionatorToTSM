@@ -2,7 +2,6 @@ local SearchAddOn = {}
 SearchAddOn.Module = select(2, ...)
 SearchAddOn.Title = select(1, ...)
 
----@diagnostic disable-next-line: undefined-global
 local Auctionator = Auctionator.API.v1
 
 local Private = {}
@@ -13,58 +12,61 @@ function Search:GetSearchFromShoppingList()
     return Private:GetSearchFromShoppingList()
 end
 
+function Search:Initialise()
+end
+
 function Private:GetShoppingListItems()
-    return pcall(Auctionator.GetShoppingListItems, SearchAddOn.Title, self.CRAFTSIM_QUEUE_NAME)
+    return pcall(self.Auctionator.GetShoppingListItems, self.Title, self.CRAFTSIM_QUEUE_NAME)
 end
 
 function Private:ConvertFromSearchString(shoppingListItem)
-    return Auctionator.ConvertFromSearchString(SearchAddOn.Title, shoppingListItem)
+    return self.Auctionator.ConvertFromSearchString(self.Title, shoppingListItem)
 end
 
 function Private:GetItemID(itemName, itemTier)
-    return SearchAddOn.Module.Reagent:GetItemID(itemName, itemTier)
+    return self.Module.Reagent:GetItemID(itemName, itemTier)
 end
 
 function Private:log(message)
-    SearchAddOn.Module.Utility:log(message)
+    self.Module.Utility:log(message)
 end
 
 function Private:DeleteShoppingListItem(itemSearchString)
-    Auctionator.DeleteShoppingListItem(SearchAddOn.Title, self.CRAFTSIM_QUEUE_NAME,
+    self.Auctionator.DeleteShoppingListItem(self.Title, self.CRAFTSIM_QUEUE_NAME,
         itemSearchString)
 end
 
 function Private:GetSearchFromShoppingList()
-    local success, result = Private:GetShoppingListItems()
+    local success, result = self:GetShoppingListItems()
     if success then
-        local searchString = Private.EMPTY_STRING
+        local searchString = self.EMPTY_STRING
         for _, shoppingListItem in ipairs(result) do
-            local itemData = Private:ConvertFromSearchString(shoppingListItem)
-            local itemID = Private:GetItemID(itemData.searchString, itemData.tier)
+            local itemData = self:ConvertFromSearchString(shoppingListItem)
+            local itemID = self:GetItemID(itemData.searchString, itemData.tier)
             if not itemID then
                 if not itemData.tier then
-                    Private:log(Private.ITEM_NAME ..
-                        itemData.searchString .. Private.ITEM_QUANTITY .. itemData.quantity)
+                    self:log(self.ITEM_NAME ..
+                        itemData.searchString .. self.ITEM_QUANTITY .. itemData.quantity)
                 else
-                    Private:log(Private.ITEM_NAME ..
+                    self:log(self.ITEM_NAME ..
                         itemData.searchString ..
-                        Private.ITEM_TIER ..
-                        itemData.tier .. Private.ITEM_QUANTITY .. itemData.quantity)
+                        self.ITEM_TIER ..
+                        itemData.tier .. self.ITEM_QUANTITY .. itemData.quantity)
                 end
             else
-                Private:DeleteShoppingListItem(shoppingListItem)
+                self:DeleteShoppingListItem(shoppingListItem)
                 searchString = searchString ..
-                    Private.ITEM_INDICATOR ..
+                    self.ITEM_INDICATOR ..
                     itemID ..
-                    Private.QUANTITY_INDICATOR .. itemData.quantity .. Private.SEARCH_ITEM_SEPARATOR
+                    self.QUANTITY_INDICATOR .. itemData.quantity .. self.SEARCH_ITEM_SEPARATOR
             end
         end
-        if searchString == Private.EMPTY_STRING then
-            return Private.EMPTY_STRING
+        if searchString == self.EMPTY_STRING then
+            return self.EMPTY_STRING
         end
         return searchString:sub(1, #searchString - 1)
     else
-        return Private.EMPTY_STRING
+        return self.EMPTY_STRING
     end
 end
 
@@ -77,7 +79,12 @@ function Private:Initialise()
     self.ITEM_TIER = ", Tier: "
     self.QUANTITY_INDICATOR = "/x"
     self.SEARCH_ITEM_SEPARATOR = ";"
-    SearchAddOn.Module.Search = Search
+    self.Auctionator = Auctionator
+    self.Module = SearchAddOn.Module
+    self.Title = SearchAddOn.Title
 end
 
 Private:Initialise()
+Search:Initialise()
+
+SearchAddOn.Module.Search = Search
