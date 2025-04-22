@@ -3,10 +3,11 @@
 [![On Curseforge](https://img.shields.io/badge/download-Curseforge-orange)](https://www.curseforge.com/wow/addons/asltotsm)
 [![On Wago](https://img.shields.io/badge/download-Wago-orange)](https://addons.wago.io/addons/asltotsm/)
 [![On WoWI](https://img.shields.io/badge/download-WoWI-orange)](https://www.wowinterface.com/downloads/info26919-AuctionatortoTSM.html)
+<br>
 [![Build Status](https://github.com/ChildOf1970/AuctionatorToTSM/actions/workflows/release.yaml/badge.svg)](https://github.com/ChildOf1970/AuctionatorToTSM/actions/workflows/release.yaml)
 [![Stable Release](https://img.shields.io/github/v/release/ChildOf1970/AuctionatorToTSM?logo=github&label=Stable)](https://github.com/ChildOf1970/AuctionatorToTSM/releases)
 [![Stable Release Date](https://img.shields.io/github/release-date/ChildOf1970/AuctionatorToTSM?logo=github&label=Released&cacheSeconds=600)](https://github.com/ChildOf1970/AuctionatorToTSM/releases)
-![GitHub commits since latest release](https://img.shields.io/github/commits-since/m/ChildOf1970/AuctionatorToTSM/latest?logo=github)
+![GitHub commits since latest release](https://img.shields.io/github/commits-since/ChildOf1970/AuctionatorToTSM/latest?logo=github)
 
 ## Description
 
