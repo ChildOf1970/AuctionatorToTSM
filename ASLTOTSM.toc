@@ -1,4 +1,4 @@
-## Interface: 110100
+## Interface: 110105, 110100
 ## Title: ASLtoTSM
 ## Author: @project-author@
 ## Version: @project-version@
