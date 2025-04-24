@@ -150,7 +150,7 @@ function Private:Initialise()
         ["Chitin Armor Banding"] = {
             [1] = "219898",
             [2] = "219899",
-            [3] = "212900"
+            [3] = "219900"
         },
         ["Clipped Bird Wing"] = "225569",
         ["Codified Greenwood"] = {
