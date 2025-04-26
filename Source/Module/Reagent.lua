@@ -323,6 +323,11 @@ function Private:Initialise()
             [2] = "213757",
             [3] = "213758"
         },
+        ["Mirror Powder"] = {
+            [1] = "224178",
+            [2] = "224177",
+            [3] = "224176"
+        },
         ["Mosswool Thread"] = "224764",
         ["Mycobloom"] = {
             [1] = "210796",
