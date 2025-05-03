@@ -56,7 +56,7 @@ function Private:CopyToClipboard(text)
         MyOKButton:SetNormalFontObject(self.FONT_NORMAL)
         MyOKButton:SetHighlightFontObject(self.FONT_HIGHLIGHT)
 
-        MyEditBox:SetScript(EventHandler.ON_KEY_UP, function(self, event)
+        MyEditBox:SetScript(EventHandler.ON_KEY_UP, function(_, event)
             if(event == EventHandler.EVENT_ESCAPE or event == EventHandler.EVENT_ENTER) then
                 MyEditBox:ClearFocus()
                 MyFrame:Hide()
