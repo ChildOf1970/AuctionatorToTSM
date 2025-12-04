@@ -454,6 +454,7 @@ function Private:Initialise()
             [2] = "212675",
             [3] = "212676"
         },
+        ["Superb Beast Fang"] = "219013",
         ["Thunderous Hide"] = {
             [1] = "212670",
             [2] = "212672",
